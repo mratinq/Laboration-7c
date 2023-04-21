@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboration L7c</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Laboration L7c - Formulär</h1>
+    <h2>Pensionat Sjöstugan</h2>
+    <h3>Förfrågan om rumsbokning</h3>
+
+    <!-- Lägg in formuläret här nedan -->
+    <form id="booking" method="POST" data-netlify="true">
+        <fieldset id="room">
+            <legend>Val av rum</legend>
+            <label>
+                <input type="radio" value="enkel" name="roomType"> Enkelrum
+            </label>
+            <label>
+                <input type="radio" checked value="dubbel" name="roomType"> Dubbelrum
+            </label>
+            <label>
+                <input type="radio" value="familj" name="roomType"> Familjerum
+            </label>
+        </fieldset>
+        <fieldset id="date">
+            <legend>Datum och antal nätter</legend>
+            <label>
+                *Ankomstdag
+                <input type="date" name="arrival" required>
+            </label>
+            <label>
+                *Antal nätter
+                <select name="nrOfNights">
+                    <option value="1">
+                        1 natt
+                    </option>
+                    <option value="2">
+                        2 nätter
+                    </option>
+                    <option value="3">
+                        3 nätter
+                    </option>
+                    <option value="4">
+                        4 nätter
+                    </option>
+                    <option value="5">
+                        5 nätter
+                    </option>
+                    <option value="6">
+                        6 nätter
+                    </option>
+                    <option value="7" selected>
+                        1 vecka
+                    </option>
+                    <option value="14">
+                        2 veckor
+                    </option>
+                </select>
+            </label>
+
+        </fieldset>
+        <fieldset id="facilities">
+            <legend>Tillägg</legend>
+            <label>
+                <input type="checkbox" name ="facility" value="internet">
+                Internet
+            </label>
+            <label>
+                <input type="checkbox" name ="facility" value="parkering">
+                Parkering
+            </label>
+            <label>
+                <input type="checkbox" name ="facility" value="sjöutsikt">
+                Sjöutsikt
+            </label>
+
+        </fieldset>
+        <fieldset id="customer">
+            <legend>Kund</legend>
+            <label for="name" >
+                *Namn
+                <input type ="text" name ="name" id="name" required>
+            </label>
+            <label for="street">
+                Gatuadress
+                <input type ="text" name ="street" id="street">
+            </label>
+            <label for="zipcode">
+                Postnummer
+                <input type ="text" name ="zipcode" id="zipcode">
+            </label>
+            <label for="city">
+                Ort
+                <input type ="text" name ="city" id="city">
+            </label>
+            <label for="email">
+                *E-post
+                <input type ="text" name ="email" id="email" required>
+            </label>          
+
+        </fieldset>
+        <input type="submit" value="Skicka förfrågan" id="send">
+
+    </form>
+
+</body>
+
+</html>
